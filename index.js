@@ -32,10 +32,10 @@ class Formatter {
     newArry.push(firstWord);
 
     for (let i = 0; i < otherWords.length; i++) {
-      if (!stopwords.includes(otherWords[i])) {
-        newArry.push(this.capitalize(otherWords[i]));
-      }else {
+      if (stopwords.includes(otherWords[i])) {
         newArry.push(otherWords[i]);
+      }else {
+        newArry.push(this.capitalize(otherWords[i]));
       }
     }
     return( newArry.join(' '))
@@ -49,4 +49,4 @@ class Formatter {
     // return firstWord + otherWords;
   }
 }
-Formatter.titleize("a tale of two cities"); // A Tale of Two Cities
+console.log(Formatter.titleize("a tale of two cities")); // A Tale of Two Cities
