@@ -20,7 +20,6 @@ class Formatter {
   static titleize(srtingOfTitle) {
     Array.from(srtingOfTitle); // convert to an array
 
-    ["a", "an", "but", "of", "and", "for", "at", "by", "from"];
     // capitalize first word
     let firstWord = Formatter.capitalize(srtingOfTitle[0]);
     let otherWords = srtingOfTitle.filter((word) =>
