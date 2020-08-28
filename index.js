@@ -26,7 +26,7 @@ class Formatter {
 
     let otherWords = srtingOfTitle.split(" ");
     otherWords.shift();
-    console.log(otherWords);
+    // console.log(otherWords);
 
     let newArry = [];
     newArry.push(firstWord);
@@ -34,9 +34,11 @@ class Formatter {
     for (let i = 0; i < otherWords.length; i++) {
       if (!stopwords.includes(otherWords[i])) {
         newArry.push(this.capitalize(otherWords[i]));
+      }else {
+        newArry.push(otherWords[i]);
       }
     }
-    return newArry;
+    console.log( newArry.join(' '))
 
     // console.log(firstWord)
     // capitalize first word
@@ -47,4 +49,4 @@ class Formatter {
     // return firstWord + otherWords;
   }
 }
-Formatter.titleize("in the night kitchen");
+Formatter.titleize("a tale of two cities"); // A Tale of Two Cities
