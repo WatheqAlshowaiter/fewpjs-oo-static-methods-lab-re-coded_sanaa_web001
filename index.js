@@ -19,7 +19,7 @@ class Formatter {
 
   static titleize(srtingOfTitle) {
     // let firstWord = srtingOfTitle.split(' ');
-    let stopwords = ["a", "an", "but", "of", "and", "for", "at", "by", "from"];
+    let stopwords = ["a", "an", "but", "of", "and", "for", "at", "by", "from", "the"];
 
     let firstWord = srtingOfTitle.replace(/ .*/, "");
     firstWord = this.capitalize(firstWord);
@@ -49,4 +49,4 @@ class Formatter {
     // return firstWord + otherWords;
   }
 }
-console.log(Formatter.titleize("a tale of two cities")); // A Tale of Two Cities
+console.log(Formatter.titleize("where the wild things are")); // A Tale of Two Cities
