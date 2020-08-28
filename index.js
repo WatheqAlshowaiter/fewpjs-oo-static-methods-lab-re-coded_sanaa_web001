@@ -38,7 +38,7 @@ class Formatter {
         newArry.push(otherWords[i]);
       }
     }
-    console.log( newArry.join(' '))
+    return( newArry.join(' '))
 
     // console.log(firstWord)
     // capitalize first word
