@@ -21,10 +21,9 @@ class Formatter {
 
     ["a", "an", "but", "of", "and", "for", "at", "by", "from"];
     // capitalize first word
-    let firstWord = capitalize(srtingOfTitle[0]);
-    let otherWords = srtingOfTitle.filter(
-      (word) =>
-        word !== ["a", "an", "but", "of", "and", "for", "at", "by", "from"]
+    let firstWord = Formatter.capitalize(srtingOfTitle[0]);
+    let otherWords = srtingOfTitle.filter((word) =>
+      word.includes(["a", "an", "but", "of", "and", "for", "at", "by", "from"])
     );
     return firstWord + otherWords;
   }
