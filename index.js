@@ -10,7 +10,7 @@ class Formatter {
   //     non-alphanumeric characters except for dashes, single quotes and spaces.
   // static
   static sanitize(string) {
-    return string.replace(/[^-,'A-Za-z0-9]+/g, "");
+    return string.replace(/[^- 'A-Za-z0-9]+/g, "");
   }
 
   // 3.  Write a method `static titleize` that takes in a string and capitalizes all
